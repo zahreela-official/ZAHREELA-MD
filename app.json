@@ -1,0 +1,155 @@
+{
+  "name": "ZAHREELA-MD",
+  "description": "I am ZAHREELA-MD Whatsapp BOT built in NodeJs by ZAHREELA to make experience better",
+  "logo": "https://i.imgur.com/KYx7iPf.jpeg",
+  "keywords": ["whatsappbot", "zahreela", "zahreela md bot", "zahreela-md", "zahreela md whatsapp bot", "zahreela wa bot","ZAHREELA-MD","ZAHREELA Whatsapp Bot","multi device"],
+  "success_url": "/zahreela/",
+  "app_url": "/zahreela/",
+  
+  "env": {
+    "OWNER_NAME": {
+      "description": "Name of Bot Owner",    
+      "value": "ZAHREELA JANWAR",
+      "required" :true
+    },   
+     
+    "WELCOME": {
+      "description": "put 'false' or 'true' to set WELCOME ",
+      "value": "false",
+      "required" :false
+    },
+     
+    "GOODBYE": {
+      "description": "put'false' or 'true' to set GOODBYE ",
+      "value": "false",
+      "required" :false
+    },
+    "BOT_NAME": {
+      "description": " NAME FOR BOT",
+      "required" :false,    
+      "value": " ᴢᴀʜʀᴇᴇʟᴀ-ᴍᴅ"
+    }, 
+    "IMAGE": {
+      "description": "Image for bot",
+      "required" :false,    
+      "value": "https://i.imgur.com/KYx7iPf.jpeg"
+    }, 
+    "TZ": {
+      "description": "Put TIME_ZONE according to your location",
+      "required" :false,    
+      "value": "Asia/Karachi"
+    },  
+    "FLUSH": {
+      "description": " Make it 'true' if bot connected but not responed (After deployement!)",
+      "required" :false,    
+      "value": "true"
+    }, 
+    "WARN_COUNT": {
+      "description": " Warn count for users to kick/block when warn limit exceed!",
+      "required" :false,    
+      "value": "2"
+    }, 
+    "READ_COMMAND": {
+      "description": " Read bot cmds",
+      "required" :false,    
+      "value": "false"
+    }, 
+    "AUTO_SAVE_STATUS": {
+      "description": " set 'true' if you want to save whatsapp status", 
+      "required" :false,   
+      "value": "false"
+    }, 
+    "HEROKU_API_KEY": {
+      "description": "Put Your Heroku Api Key Here",
+      "value": "",
+      "required" :true 
+    },   
+    "HEROKU_APP_NAME": {
+      "description": "Put Your Heroku App Name Here as you write at the top",
+      "value": "",
+    "required" :true
+    }, 
+    "WAPRESENCE": {
+      "description": "Fill the value: 'unavailable'(for nothing) | 'available'(for alwaysonline) | 'composing'(for typing) | 'recording' | 'paused' ",
+      "required" :false,
+      "value": "unavailable"
+    },
+    "AUTO_READ_STATUS": {
+      "description": "Fill the value 'true' if you want bot view your Statuses.",
+      "required" :false,
+      "value": "true"
+    }, 
+    "MSGS_IN_LOG": {
+      "description": "Fill the value true if you want to see Messages in Console.",
+      "required" :false,
+      "value": "false"
+    },
+    "READ_MESSAGE": {
+      "description": "Fill the value 'true' if you want bot to read all messages.",
+      "required" :false,
+      "value": "false"
+    },
+    "DISABLE_PM": {
+      "description": "Disable bot in pm, Take it false if you want to run bot in your pm (if MODE is Public)",
+      "value": "false",
+      "required" :false
+    },
+    "PREFIX": {
+      "description": "Enter your prefix for bot.",
+      "value": "."
+    },
+    "OWNER_NUMBER": {
+      "description": "number should be in international format without + and multiple numbers must be separated by a comma \",\",
+      "value": "923212321750"
+    },
+    "SESSION_ID": {
+      "description": "put your SESSION_ID here.",
+      "value": ""
+  
+    },
+    "OPENAI_API_KEY": {
+      "description": "put your OPENAI api key here.Get it from beta.openai.com ",
+      "value": "",
+      "required" :false
+    }, 
+    "ELEVENLAB_API_KEY": {
+      "description": "Put your ElevenLab api key here for Aitts.",
+      "value": "",
+      "required" :false
+    }, 
+    "REMOVE_BG_KEY": {
+      "description": "put your REMOVE BG KEY here.Get it from removeBg.com ",
+      "value": "",
+      "required" :false
+    },
+    "MODE": {
+      "description": "set worktype of your bot to Use bot public or private",
+      "value": "public"
+    },
+    "PACK_NAME": {
+      "description": "Put Sticker Pack_Name.",
+      "value": " ᴢᴀʜʀᴇᴇʟᴀ-ᴍᴅ",
+      "required": false 
+    },
+    "PACK_AUTHER": {
+      "description": "Put Sticker Author_Name.",
+      "value": " ᴢᴀʜʀᴇᴇʟᴀ-ᴍᴅ",
+      "required": false 
+    }
+  }, 
+  "addons": [
+    {
+      "plan": "heroku-postgresql:basic"
+    } 
+  ],
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" },
+    { "url": "https://github.com/carlosdommor/heroku-buildpack-ffmpeg-latest" }
+  ],
+  "formation": {
+      "web": {
+          "quantity": 1,
+          "size": "standard-2x"
+      }
+  }
+}
